@@ -17,20 +17,12 @@ git clone https://github.com/chawin-a/wallet-monitor.git
 ```bash
 docker compose up -d
 ```
-3. Add wallets to `configs.yml`
-```
-...
-wallets:
-    - YOUR_WALLET_ADDRESS_1
-    - YOUR_WALLET_ADDRESS_2
-...
-```
+3. Create `configs.yml` see `configs/configs.example.yml`
 4. Run this script to add wallets to database
 ```bash
 go run cmd/add/main.go
 ```
-5. Create `configs.yml` see `configs/configs.example.yml`
-6. Start service
+5. Start service
 ```bash
 go run cmd/worker/main.go
 ```
